@@ -1,0 +1,56 @@
+Task 6a..
+
+    for file_path in file_paths:
+
+        if os.path.exists(file_path):
+
+            with open(file_path, 'r') as original_file:
+
+                original_content = original_file.read()
+
+                copy_file_path = file_path.split('.')[0] + '_copy.' + file_path.split('.')[1]
+
+                with open(copy_file_path, 'w') as copy_file:
+
+                    copy_file.write(original_content)
+
+                print(f"Contents copied from {file_path} to {copy_file_path} successfully.")
+
+        else:
+
+            print(f"Error: File '{file_path}' not found.")
+
+
+
+Task 6b..
+
+def write_employee_report(filename):
+
+    employees = [
+
+        {"name": "Alice", "department": "HR"},
+
+        {"name": "Bob", "department": "Engineering"},
+
+        {"name": "Charlie", "department": "Finance"}
+
+    ]
+
+    
+
+    with open(filename, "w") as file:
+
+        for employee in employees:
+
+            line = f"Name: {employee['name']}, Department: {employee['department']}\n"
+
+            file.write(line)
+
+
+
+# Example usage:
+
+write_employee_report("employee_report.txt")
+
+Task 6c...
+
