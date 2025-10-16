@@ -1,0 +1,26 @@
+# Plotting Probabilities Using Matplotlib
+
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.stats import norm, uniform
+
+# Generate a range of x values
+x = np.linspace(-5, 5, 1000)
+
+# Compute probability density functions (PDF)
+normal_pdf = norm.pdf(x, loc=0, scale=1)     # Mean=0, Std Dev=1
+uniform_pdf = uniform.pdf(x, loc=-2, scale=4) # Range (-2,2)
+
+# Plot the PDFs
+plt.plot(x, normal_pdf, label='Normal Distribution', color='blue')
+plt.plot(x, uniform_pdf, label='Uniform Distribution', color='green')
+
+# Add labels and title
+plt.title("Plotting Probability Distributions using Matplotlib")
+plt.xlabel("Random Variable (x)")
+plt.ylabel("Probability Density")
+plt.legend()
+plt.grid(True)
+
+# Display the plot
+plt.show()
