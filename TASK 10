@@ -1,0 +1,106 @@
+Task 10a..
+
+Program:
+
+#pip install matplotlib
+
+import matplotlib.pyplot as plt
+
+
+
+languages = ['Java', 'Python', 'PHP', 'JavaScript', 'C#', 'C++']
+
+popularity = [22.2, 17.6, 8.8, 8, 7.7, 6.7]
+
+
+
+plt.bar(languages, popularity, color='b')
+
+plt.title('Popularity of Programming Languages')
+
+plt.xlabel('Programming Languages')
+
+plt.ylabel('Popularity')
+
+plt.show()
+
+
+
+Task 10b..
+
+Program:
+
+import matplotlib.pyplot as plt
+
+
+
+# Step 1
+
+languages = ['Java', 'Python', 'PHP', 'JavaScript', 'C#', 'C++']
+
+popularity = [22.2, 17.6, 8.8, 8, 7.7, 6.7]
+
+
+
+# Step 2
+
+plt.pie(popularity, labels=languages, autopct='%1.1f%%')
+
+
+
+# Step 3
+
+plt.title('Popularity of Programming Languages')
+
+plt.legend(languages, loc="best")
+
+
+
+# Step 4
+
+plt.show()
+
+
+
+Task 10c..
+
+Program:
+
+import pandas as pd
+
+import matplotlib.pyplot as plt
+
+
+
+# Read CSV
+
+df = pd.read_csv("students.csv")
+
+
+
+# x-axis = student names
+
+x = df["Name"]
+
+
+
+# Plot each test as a separate line
+
+plt.plot(x, df["Test1"], marker='s', label="Test1")
+
+plt.plot(x, df["Test2"], marker='o', label="Test2")
+
+plt.plot(x, df["Test3"], marker='*', label="Test3")
+
+plt.plot(x, df["Test4"], marker='x', label="Test4")
+
+
+
+plt.ylabel("Marks")
+
+plt.title("Student Marks Across Tests")
+
+plt.legend()
+
+plt.show()
+
